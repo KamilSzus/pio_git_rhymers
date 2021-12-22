@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery;
 
 //kombinacja tych klawiszy alt + ← oraz alt + → pozwala przemieszczac sie pomiedzy otwartymi wczesniej plikami
-public class HanoiRhymer extends defaultCountingOutRhymer {
+public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     int totalRejected = 0;
 
@@ -10,7 +10,7 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
     }
 
     public void countIn(int in) {
-        if (!callCheck() && in > peekaboo())
+        if (!callCheck() && in > getLastNumber())
             totalRejected++;
         else
             super.countIn(in);
