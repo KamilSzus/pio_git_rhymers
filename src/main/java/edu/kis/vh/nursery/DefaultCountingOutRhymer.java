@@ -6,10 +6,10 @@ public class DefaultCountingOutRhymer {
     public static final int SIZE = 12;
     public static final int START_VAL = -1;
 
-    private int[] numbers = new int[SIZE];
+    private final int[] numbers = new int[SIZE];
     public int total = START_VAL;
 
-    public void countIn(int in) {
+    public void countIn(final int in) {
 
         if (!isFull())
             numbers[++total] = in;
