@@ -45,11 +45,4 @@ public class IntLinkedList {
         this.last = last;
     }
 
-    public int getI() {
-        return i;
-    }
-
-    public void setI(int i) {
-        this.i = i;
-    }
 }
