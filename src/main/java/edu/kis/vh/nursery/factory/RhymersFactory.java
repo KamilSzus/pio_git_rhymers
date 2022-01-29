@@ -12,4 +12,4 @@ public interface RhymersFactory {
 
     public DefaultCountingOutRhymer GetHanoiRhymer();
 
-}
+}// TODO: Delete unnecessary modifier public for interface method

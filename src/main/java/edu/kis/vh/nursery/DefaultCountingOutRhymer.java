@@ -11,11 +11,11 @@ public class DefaultCountingOutRhymer {
 
     public int getTotal() {
         return total;
-    }
+    }// TODO: Delete unnecessary getter
 
     public void setTotal(int total) {
         this.total = total;
-    }
+    }// TODO: Delete unnecessary setter
 
     public void countIn(final int in) {
 
