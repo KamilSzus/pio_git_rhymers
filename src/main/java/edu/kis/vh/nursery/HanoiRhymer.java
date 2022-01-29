@@ -1,17 +1,28 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRhymer extends defaultCountingOutRhymer {
+//kombinacja tych klawiszy alt + ← oraz alt + → pozwala przemieszczac sie pomiedzy otwartymi wczesniej plikami
+public class HanoiRhymer extends DefaultCountingOutRhymer {
+    /**
+     * counting out class
+     */
+    private int totalRejected = 0;
 
-int totalRejected = 0;
+    /**
+     * return total rejected int
+     */
+    public int reportRejected() {
+        return totalRejected;
+    }
 
-	public int reportRejected() {
-		return totalRejected;
-	}
-
-	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
-			totalRejected++;
-			else
-				super.countIn(in);
-	}
+    /**
+     * counting total rejected
+     * @param in input number to count in
+     */
+    @Override
+    public void countIn(final int in) {
+        if (!callCheck() && in > getLastNumber())
+            totalRejected++;
+        else
+            super.countIn(in);
+    }
 }
